@@ -8,25 +8,22 @@ Each tutorial in this repository is designed to guide you through a specific fea
 
 ## Table of Contents
 
-1. [Hello World](01-hello-world/README.md)  
-   Learn how to create and run your first "Hello World" workflow in Brane.
-
-2. [First Package](02-first-package/README.md)  
-   Discover how to create your first Brane package with Python and use it in a workflow.
-
-3. [Inter-Package Communication](03-inter-package-communication/README.md)  
-   Explore how to connect multiple Brane packages to pass information seamlessly between them.
+| Tutorial                          | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| [1. Hello World](01-hello-world/README.md)         | Learn how to create and run your first "Hello World" workflow in Brane.                        |
+| [2. First Package](02-first-package/README.md)     | Discover how to create your first Brane package with Python and use it in a workflow.         |
+| [3. Inter-Package Communication](03-inter-package-communication/README.md) | Explore how to connect multiple Brane packages to pass information seamlessly between them. |
 
 ## Getting Started
 
 To get started with the tutorials:
 1. Clone this repository to your local machine:
-   git clone <repository-url>
+   `git clone https://github.com/soreana/brane-tutorials.git`
 2. Navigate to the tutorial you're interested in and follow the instructions in its `README.md`.
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE). Feel free to use and adapt the content for your learning or projects.
+This repository is licensed under the [Apache License](LICENSE). Feel free to use and adapt the content for your learning or projects.
 
 ## Feedback and Contributions
 
@@ -35,4 +32,3 @@ If you have any feedback or ideas for additional tutorials, please feel free to 
 ---
 
 Happy learning, and enjoy exploring Brane!
-
