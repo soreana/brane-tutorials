@@ -21,10 +21,6 @@ To get started with the tutorials:
    `git clone https://github.com/soreana/brane-tutorials.git`
 2. Navigate to the tutorial you're interested in and follow the instructions in its `README.md`.
 
-## License
-
-This repository is licensed under the [Apache License](LICENSE). Feel free to use and adapt the content for your learning or projects.
-
 ## Feedback and Contributions
 
 If you have any feedback or ideas for additional tutorials, please feel free to open an issue or submit a pull request. Contributions are always welcome!
