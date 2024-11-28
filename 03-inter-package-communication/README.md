@@ -274,6 +274,63 @@ Please provide input for the chosen function:
 Result: {'original_message': 'HELLO FROM PACKAGE 1!', 'processed_at': 'Package 2', 'received_from': 'Package 1', 'timestamp': '2024-11-17T10:23:45.123456'} [String]
 ```
 
+# Step 3 - Build the Workflow
+
+Now that we’ve created and tested both packages, it’s time to connect them in a Brane workflow. This workflow will demonstrate how to pass data from one package to another, creating a seamless pipeline.
+
+## Overview
+
+In this step, we’ll:
+1. Import the two packages into a workflow script.
+2. Use the output from Package 1 as input for Package 2.
+3. Print the final result to the console.
+
+## Files
+
+- `workflow.bs`: The workflow script connecting the two packages.
+
+## Instructions
+
+### Step 1: Write the Workflow Script
+1. Create a file named `workflow.bs`.
+2. Write the following workflow code:
+
+```
+import generator;
+import processor;
+
+#[on("localhost")]
+// Step 1: Call Package 1 to generate the message
+let message_json := generate_message();
+
+// Step 2: Pass the output from Package 1 to Package 2 for processing
+let result_json := process_message(message_json);
+
+// Step 3: Print the final result
+println("Final result from Package 2:");
+println(result_json);
+```
+
+This script:
+- Calls the `generate_message` action from Package 1 and stores the JSON output in `message_json`.
+- Passes `message_json` as input to the `process_message` action in Package 2.
+- Prints the final processed JSON result from Package 2.
+
+### Step 2: Run the Workflow
+1. Open your terminal and navigate to the directory containing `workflow.bs`.
+2. Run the workflow with the following command:
+```
+brane workflow run workflow.bs
+```
+
+### Step 3: Check the Output
+If everything is set up correctly, you should see output similar to this in your terminal:
+
+```
+asa@host03:~/$ brane workflow run workflow.bs
+Final result from Package 2:
+{'original_message': 'HELLO FROM PACKAGE 1!', 'processed_at': 'Package 2', 'received_from': 'Package 1', 'timestamp': '2024-11-28T02:57:08.149038'}
+```
 
 ---
 
