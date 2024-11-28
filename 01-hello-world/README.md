@@ -12,13 +12,13 @@ This tutorial is designed for beginners who want to get started with Brane and u
 
 ## Files
 
-- `tutorial-1.mp4`: Video recording of the tutorial.
-- `hello_world.branescript`: The workflow script used in this tutorial.
+- `<Youtube Link>`: Video recording of the tutorial.
+- `hello_world.bs`: The workflow script used in this tutorial.
 
 ## Instructions
 
 ### Step 1: Write the Workflow
-1. Open a text editor and create a file named `hello_world.branescript`.
+1. Open a text editor and create a file named `hello_world.bs`.
 2. Copy the following workflow into the file:
 
 #[on("localhost")]
@@ -26,13 +26,20 @@ println("Hello world!");
 
 ### Step 2: Run the Workflow
 1. Open your terminal.
-2. Navigate to the directory where `hello_world.branescript` is saved.
+2. Navigate to the directory where `hello_world.bs` is saved.
 3. Run the workflow using the following command:
-brane run hello_world.branescript
+
+```
+brane workflow run hello_world.bs
+```
 
 ### Step 3: View the Output
 If everything is set up correctly, you should see the following output in your terminal:
+
+```
+asa@host03$ brane workflow run hello_world.bs
 Hello world!
+```
 
 ## What's Next?
 
