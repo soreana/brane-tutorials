@@ -1,0 +1,27 @@
+# Basic package metadata
+name: generator
+version: 1.0.0
+kind: ecu
+
+# Dependencies required to run the package
+dependencies:
+- python3
+
+# Files to include in the package
+files:
+- generator.py
+
+# Entry point of the package
+entrypoint:
+  kind: task
+  exec: generator.py
+
+# Tasks defined in this package
+actions:
+  'generate_message':
+    command:
+    input:
+    output:
+    - name: message_json
+      type: string
+

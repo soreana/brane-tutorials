@@ -1,0 +1,14 @@
+import generator;
+import processor;
+
+#[on("localhost")]
+// Step 1: Call Package 1 to generate the message
+let message_json := generate_message();
+
+// Step 2: Pass the output from Package 1 to Package 2 for processing
+let result_json := process_message(message_json);
+
+
+// Step 3: Print the final result
+println("Final result from Package 2:");
+println(result_json);

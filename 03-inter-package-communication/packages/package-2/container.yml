@@ -1,0 +1,29 @@
+# Basic package metadata
+name: processor
+version: 1.0.0
+kind: ecu
+
+# Dependencies required to run the package
+dependencies:
+- python3
+
+# Files to include in the package
+files:
+- processor.py
+
+# Entry point of the package
+entrypoint:
+  kind: task
+  exec: processor.py
+
+# Tasks defined in this package
+actions:
+  'process_message':
+    command:
+    input:
+    - name: input_json
+      type: string
+    output:
+    - name: result_json
+      type: string
+
