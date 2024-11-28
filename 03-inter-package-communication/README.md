@@ -432,12 +432,6 @@ You’re now ready to explore more advanced topics and challenges in Brane. Here
 
 If you’re looking for inspiration, revisit the earlier tutorials in this repository or consider creating your own custom workflows from scratch.
 
-## Feedback and Contributions
-
-If you have any feedback on this tutorial or ideas for new tutorials, feel free to open an issue or submit a pull request. Your contributions are always welcome!
-
 ---
 
 Thank you for following along, and happy learning! Keep exploring and building with Brane!
-
-Happy learning, and enjoy exploring Brane!
