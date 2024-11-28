@@ -1,0 +1,27 @@
+# A few generic properties of the file
+name: hello_world
+version: 1.0.0
+kind: ecu
+
+# Defines things we need to install
+dependencies:
+- python3
+
+# Specifies the files we need to put in this package
+files:
+- hello.py
+
+# Defines which of the files is the file that the framework will call
+entrypoint:
+  kind: task
+  exec: hello.py
+
+# Defines the tasks in this package
+actions:
+  'hello_world':
+    command:
+    input:
+    output:
+    - name: output
+      type: string
+

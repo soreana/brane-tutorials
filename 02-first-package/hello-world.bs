@@ -1,0 +1,4 @@
+import hello_world;
+
+#[on("localhost")]
+println(hello_world());
