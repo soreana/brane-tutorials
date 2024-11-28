@@ -21,8 +21,10 @@ This tutorial is designed for beginners who want to get started with Brane and u
 1. Open a text editor and create a file named `hello_world.bs`.
 2. Copy the following workflow into the file:
 
+```
 #[on("localhost")]
 println("Hello world!");
+```
 
 ### Step 2: Run the Workflow
 1. Open your terminal.
