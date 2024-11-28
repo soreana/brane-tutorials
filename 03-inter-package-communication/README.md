@@ -332,6 +332,112 @@ Final result from Package 2:
 {'original_message': 'HELLO FROM PACKAGE 1!', 'processed_at': 'Package 2', 'received_from': 'Package 1', 'timestamp': '2024-11-28T02:57:08.149038'}
 ```
 
+# Step 4 - Enhance the Workflow (Optional)
+
+In this step, we’ll explore optional enhancements to make the workflow more robust, informative, and flexible. These enhancements are not mandatory but can help you design workflows that are smarter and easier to debug.
+
+## Overview
+
+We’ll focus on adding:
+1. **Logging**: Track workflow progress with meaningful messages.
+2. **Conditional Logic**: Add decision-making capabilities to your workflow.
+
+## Instructions
+
+### Step 1: Add Logging
+Logging helps track the workflow’s progress and makes it easier to debug. Let’s update the workflow script with logging statements:
+
+```
+import generator;
+import processor;
+
+#[on("localhost")]
+// Step 1: Call Package 1 to generate the message
+println("Starting Package 1...");
+let message_json := generate_message();
+println("Package 1 completed successfully.");
+
+
+println("Generated message by Package 1:");
+println(message_json);
+
+
+// Step 2: Pass the output from Package 1 to Package 2 for processing
+println("Starting Package 2...");
+let result_json := process_message(message_json);
+println("Package 2 completed successfully.");
+
+// Step 3: Print the final result
+println("Final result from Package 2:");
+println(result_json);
+```
+
+With these logging statements, you can monitor the workflow’s execution and identify any issues more easily.
+
+### Step 2: Add Conditional Logic
+Conditional logic allows the workflow to adapt based on the data. For example, you might process data only if it meets specific criteria:
+
+```
+import generator;
+import processor;
+
+#[on("localhost")]
+// Step 1: Call Package 1 to generate the message
+let message_json := generate_message();
+
+let some_value := 16;
+
+if (some_value == 16 ) {
+    println("message_json is:");
+    println(message_json);
+}
+
+// Step 2: Pass the output from Package 1 to Package 2 for processing
+let result_json := process_message(message_json);
+
+// Step 3: Print the final result
+println("Final result from Package 2:");
+println(result_json);
+```
+
+This enhancement demonstrates how workflows can evaluate data and make decisions, adding flexibility to your pipelines.
+
+# Step 5 - Wrap-Up
+
+Congratulations on completing the "Inter-Package Communication" tutorial! You’ve now gained valuable skills for building modular and reusable workflows in Brane.
+
+## What You’ve Learned
+
+In this tutorial, you’ve:
+1. Built two Brane packages:
+   - **Package 1**: Generates structured JSON data.
+   - **Package 2**: Consumes and processes the JSON data.
+2. Created a workflow to connect the two packages, passing data seamlessly between them.
+3. Enhanced the workflow with features like logging and conditional logic for smarter execution.
+4. Tested and verified the workflow to ensure everything worked as expected.
+
+## Why This Matters
+
+Inter-package communication is a fundamental concept in Brane, enabling you to:
+- Break down complex tasks into manageable components.
+- Design workflows that are modular, reusable, and scalable.
+- Collaborate effectively by combining packages developed by different teams.
+
+## Next Steps
+
+You’re now ready to explore more advanced topics and challenges in Brane. Here are some suggestions:
+- Add additional packages to your workflow for more functionality.
+- Explore advanced Brane features, such as error handling or external API integrations.
+- Experiment with different data formats and processing techniques.
+
+If you’re looking for inspiration, revisit the earlier tutorials in this repository or consider creating your own custom workflows from scratch.
+
+## Feedback and Contributions
+
+If you have any feedback on this tutorial or ideas for new tutorials, feel free to open an issue or submit a pull request. Your contributions are always welcome!
+
 ---
+
+Thank you for following along, and happy learning! Keep exploring and building with Brane!
 
 Happy learning, and enjoy exploring Brane!
